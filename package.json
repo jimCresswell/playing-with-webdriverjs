@@ -1,6 +1,7 @@
 {
   "name": "webdriverjstest",
   "version": "0.0.1",
+  "private": true
   "description": "Having a play with webdriverjs and mocha",
   "dependencies": {
     "webdriverjs": "~1.6.1"
