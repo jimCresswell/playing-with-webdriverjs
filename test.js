@@ -1,5 +1,7 @@
-var webdriverjs = require('webdriverjs'),
-    assert      = require('assert');
+var chai        = require('chai'),
+    assert      = chai.assert,
+    expect      = chai.expect,
+    webdriverjs = require('webdriverjs');
  
 describe('my webdriverjs tests', function(){
  
@@ -15,17 +17,17 @@ describe('my webdriverjs tests', function(){
         client
             .url('https://github.com/')
             .getElementSize('.header-logo-wordmark', function(err, result) {
-                assert(err === null);
-                assert(result.height === 32);
-                assert(result.width  === 89);
+                expect(err).to.be.null;
+                assert.strictEqual(result.height , 32);
+                assert.strictEqual(result.width, 89);
             })
             .getTitle(function(err, title) {
-                assert(err === null);
-                assert(title === 'GitHub · Build software better, together.');
+                expect(err).to.be.null;
+                assert.strictEqual(title,'GitHub · Build software better, together.');
             })
             .getElementCssProperty('css selector','a[href="/plans"]', 'color', function(err, result){
-                assert(err === null);
-                assert(result === 'rgba(65,131,196,1)');
+                expect(err).to.be.null;
+                assert.strictEqual(result, 'rgba(65,131,196,1)');
             })
             .call(done);
     });
