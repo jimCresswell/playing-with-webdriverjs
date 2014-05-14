@@ -2,7 +2,6 @@
   "name": "webdriverjstest",
   "version": "0.0.1",
   "description": "Having a play with webdriverjs and mocha",
-  "main": "index.js",
   "dependencies": {
     "webdriverjs": "~1.6.1"
   },
