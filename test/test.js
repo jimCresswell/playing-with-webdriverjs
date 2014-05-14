@@ -9,7 +9,7 @@ describe('my webdriverjs tests', function(){
     var client = {};
  
     before(function(){
-            client = webdriverjs.remote({ desiredCapabilities: {browserName: 'phantomjs'} });
+            client = webdriverjs.remote({ desiredCapabilities: {browserName: 'chrome'} });
             client.init();
     });
  
